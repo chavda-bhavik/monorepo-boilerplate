@@ -1,0 +1,12 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate Application to get started with Monorepo",
+  "private": true,
+  "author": "chavda-bhavik",
+  "license": "MIT",
+  "scripts": {
+    "build:shared": "pnpm run --filter @monorepo/shared build",
+    "start:shared": "pnpm run --filter @monorepo/shared start",
+  }
+}
