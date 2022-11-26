@@ -8,5 +8,32 @@
   "scripts": {
     "build:shared": "pnpm run --filter @monorepo/shared build",
     "start:shared": "pnpm run --filter @monorepo/shared start",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "apps/**/*.{ts,tsx,json}": [
+      "prettier --ignore-path ./.prettierignore --write",
+      "eslint --fix"
+    ],
+    "packages/**/*.{ts,tsx,json}": [
+      "prettier --ignore-path ./.prettierignore --write",
+      "eslint --fix"
+    ],
+    "libs/**/*.{ts,js,json}": [
+      "prettier --ignore-path ./.prettierignore --write",
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
+    "prettier": "^2.8.0"
   }
 }
