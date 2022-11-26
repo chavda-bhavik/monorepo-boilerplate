@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build:shared": "pnpm run --filter @monorepo/shared build",
+    "build:dal": "pnpm run --filter @monorepo/dal build",
     "start:shared": "pnpm run --filter @monorepo/shared start",
+    "start:dal": "pnpm run --filter @monorepo/dal start",
     "prepare": "husky install"
   },
   "lint-staged": {
