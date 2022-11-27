@@ -11,6 +11,7 @@ export class BaseRepository<T extends IDataObject> {
 
   create(entity: T) {
     this.data.push(entity);
+    return entity;
   }
 
   getAll() {
